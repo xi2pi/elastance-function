@@ -28,4 +28,4 @@ This project about the computation of patient-specific elastance functions is se
 
 ## 5) Simulations based on lumped parameter model
 
-<img src=/figures/pv_loop_simulation.png width=400px>
+<img src=/figures/pv_loop_simulation.PNG width=400px>
