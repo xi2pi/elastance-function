@@ -51,25 +51,27 @@ def plot_pvloop(pv):
     
 
     # drop first and last one
-    for i in range(1, len(parts)-1):
-        x = np.linspace(0, 1, num = len(parts[i]))
-        
-        #y = np.array([])
-        parts_min = min(parts[i])
-        parts_max = max(parts[i])
-        #print(parts_min)
-        parts[i] = parts[i] - parts_min
-        parts[i] = parts[i] / (parts_max-parts_min)
-        
+#    for i in range(1, len(parts)-1):
+#        x = np.linspace(0, 1, num = len(parts[i]))
+#        
+#        #y = np.array([])
+#        parts_min = min(parts[i])
+#        parts_max = max(parts[i])
+#        #print(parts_min)
+#        parts[i] = parts[i] - parts_min
+#        parts[i] = parts[i] / (parts_max-parts_min)
+#        
+#
+#
+#        plt.plot(x, parts[i], color = "r", label= "elastance signal")
 
-
-        plt.plot(x, parts[i], color = "r", label= "elastance signal")
+    plt.plot(pv["time"].values, elastance, 'r')
         
-    plt.xlabel("Time [-]")
-    plt.ylabel("Elastance [-]")
+    plt.xlabel("Time [s]")
+    plt.ylabel("Elastance [mmHg/ml]")
         
     plt.grid()    
-    plt.savefig("elastance.png")
+    plt.savefig("elastance_2.png")
     plt.show()
 
 
